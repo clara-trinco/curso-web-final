@@ -1,11 +1,4 @@
-header{
-    min-height: 100vh;
-}
-
-.hero{
-    margin-top:15vh;  
-    text-align: center;
-}
+/* GENERAL */
 
 h1{
     text-transform: uppercase;
@@ -15,9 +8,31 @@ h1{
     font-family: "lato", "sans-serif";
 }
 
+.padding-section{
+    padding:120px 0;
+}
+
+.grey-section{
+    background-color: rgb(245,245,245);
+}
+
+/* FIN GENERAL */
+
+/* HEADER */
+header{
+    min-height: 100vh;
+}
+
+.hero{
+    margin-top:15vh;  
+    text-align: center;
+}
+
 .hero h1{
     color: #777;
 }   
+
+/*Animacion svg */
 
 .hero svg{
     height: 38vh;
@@ -38,5 +53,104 @@ h1{
     stroke: #000000;
     stroke-width: 1;
     transition: fill 2s;
+}
+/* Fin animacion svg */
+/* FIN HEADER */
+
+
+/* SECTION INTRO*/
+#intro-nosotros{
+    box-shadow: inset 0px 10px 20px rgba(0,0,0,0.05);
+}
+
+#intro-nosotros h2{
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    font-family: "lato", "sans-serif";
+}
+
+#intro-nosotros p{
+    text-align: justify;
+    padding-right: 50px;
+    color: #777;
+}
+
+#carruselClientes2{
+    margin-top: 40px;
+    margin-right: 10px;
+    margin-left:10px;
+}
+
+#carruselClientes2 img{
+    transform: scale(0.8);
+    filter: grayscale(90%);
+    transition: all 0.5s ease-in;
+}
+
+#carruselClientes2 img:hover{
+    transform: scale(1);
+    filter: grayscale(0%);
+}
+
+#videoPresentacion{
+    width: 100%;
+}
+
+#intro-nosotros .video-controls{
+    text-align: right;
 
 }
+
+#intro-nosotros .video-controls button{
+    border: none;
+    background: none;   
+}
+
+#intro-nosotros .video-controls button:active,
+#intro-nosotros .video-controls button:focus{
+    outline:none;
+}
+
+#intro-nosotros .video-controls button i{
+    color:#777;
+    font-size: 1.5rem;   
+}
+
+#intro-nosotros .video-container-inner{
+    position: relative;
+}
+
+#iconoPlayVid{
+    position: absolute;
+    color: #444;
+    font-size: 5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    cursor: pointer;
+}
+
+/* FIN SECTION INTRO*/
+
+
+
+
+/*CORRECION MENU RESPONSIVE */
+@media screen and (max-width: 767px){
+    .navbar-brand{
+        align-self: start;
+    }
+
+    nav > div{
+        text-align: right;
+    }
+
+    #navbarNav {
+        margin-top: 20px;
+        padding-right:15px; 
+    }
+};
+
+/* FIN CORRECION MENU RESPONSIVE */
+
