@@ -1,9 +1,18 @@
-//ROTACION DEL LOGO
+//ESCUCHADOR DE SCROLL
 
 $(window).on("scroll", () => {
+    //ROTACION DEL LOGO
     const scrollRealizado = $(window).scrollTop();
     const giraRuedita = `${scrollRealizado * 0.1}deg`;
     $("#logo").css("transform",`rotate(${giraRuedita})`);
+
+    //APARICION DE IMAGENES
+    const altura = $(".reveal").offset().top;//offset me da las coordenadas de donde esta y agregando el top solo me devuelve donde empieza
+    const diferencia = window.innerHeight * 0.5;
+    console.log(diferencia);
+    if(scrollRealizado >= altura - diferencia ){
+        $(".reveal").addClass("visible");
+    }
 });
 
 //Trazado de SVG
@@ -81,3 +90,5 @@ $(".nav-link").on("click" , function(){
         1000,
     );
 });
+
+
