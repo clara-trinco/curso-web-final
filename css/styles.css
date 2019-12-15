@@ -1,4 +1,7 @@
 /* GENERAL */
+body, html{
+    overflow-x: hidden;
+}
 
 h1{
     text-transform: uppercase;
@@ -383,7 +386,34 @@ header{
 
 /*FIN SECTION VIDEO*/
 
+/*SPINNER*/
+.spinner{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #444;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.spinner img{
+    filter: invert(100%);
+    animation: rotar 5s infinite linear;
+}
+
+@keyframes rotar{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+} 
+/*FIN SPINNER*/
 
 
 /*CORRECION MENU RESPONSIVE */

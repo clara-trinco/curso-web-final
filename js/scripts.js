@@ -1,5 +1,4 @@
 //ESCUCHADOR DE SCROLL
-
 $(window).on("scroll", () => {
     //ROTACION DEL LOGO
     const scrollRealizado = $(window).scrollTop();
@@ -13,7 +12,7 @@ $(window).on("scroll", () => {
     // if(scrollRealizado >= altura - diferencia ){
     //     $(".reveal").addClass("visible");
     // }
-
+ //APARICION DE IMAGENES
     $(".reveal").each(function(){
         const altura = $(this).offset().top;
         const margen = window.innerHeight * 0.7;
@@ -25,7 +24,6 @@ $(window).on("scroll", () => {
 });
 
 //Trazado de SVG
-
 function trazar(){
     new Vivus("heroSvg", {
         duration:250,
@@ -38,7 +36,6 @@ function trazar(){
 }
 
 //Tipear en intro-nosotros
-
 function tipear(){
     new TypeIt("#escritura", {
         strings: ["ELEGANTES","MODERNAS","RESPONSIVE"],
@@ -50,7 +47,6 @@ function tipear(){
 }
 
 //Carrusel2 clientes en intro-nosotros
-
 function carrusel2(){
     $("#carruselClientes2").owlCarousel({
         items: 3,
@@ -62,12 +58,20 @@ function carrusel2(){
     });
 }
 
-//cuando la pagina este lista
 
+//Quitar Spinner
+function quitarSpinner(){
+    $(".spinner").fadeOut(1000, () => {
+        $("h1").animate({"letter-spacing": "15px"}, 800);
+    });
+}
+
+//cuando la pagina este lista
 window.onload = () => {
     trazar();
     tipear();
-    carrusel2();    
+    carrusel2();  
+    quitarSpinner();  
 };
 
 
