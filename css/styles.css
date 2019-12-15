@@ -196,6 +196,10 @@ header{
     font-size: 1.2rem;
 }
 
+#process img.responsive{
+    width: 100%;
+}
+
 /*FIN SECTION PROCESOS*/
 
 /*SECTION SKILLS*/
@@ -245,6 +249,141 @@ header{
 
 
 /*FIN SECTION SKILLS*/
+
+
+/*SECTION EQUIPO*/
+
+#team article{
+    text-align: center;
+    position: relative;
+}
+
+#team article img{
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+#team article ul{
+    margin: 0;
+    padding: 0 10px;
+    list-style-type: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.5rem;
+    background-color: #fff;
+}
+
+#team article ul .divider{
+    width: 50%;
+    margin: 0 25%;
+    border-bottom: 1px solid #bd9f86;
+    opacity: 0.5;
+}
+
+#team article ul li a{
+    display: block;
+    padding: 8px 5px;
+    color: #bd9f86;
+}
+
+#team article .header .divider{
+    width: 50px;
+    margin: 20px auto;
+    border-bottom: 1px solid black;
+    opacity: 0.2;
+}
+
+#team .reveal{
+    opacity: 0;
+    transition-duration: 1.2s;
+    transform: translateY(200px);
+}
+
+#team .reveal.visible{
+    opacity: 1;    
+    transform: translateY(0px);
+}
+
+
+.delay-2{
+    transition-delay: 0.2s;
+}
+
+.delay-4{
+    transition-delay: 0.4s;
+}
+
+.claimbar{
+    background-image: url(../img/graphic/contain-line.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding: 60px;
+    text-align: center;
+}
+
+.claimbar p{
+    text-transform: uppercase;
+    color: #bd9f86;
+    font-size: 0.9rem;
+}
+
+#team .row:last-of-type{
+    margin-top: 100px;
+}
+
+#team div[class^="progress"]{
+    height: 4px;
+    background: rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+    position: relative;
+}
+
+#team div[class^="progress"]:before{
+    content: "";
+    position: absolute;
+    background: black;
+    height: 100%;
+    left: 0;
+    top: 0;  
+    width: 0;
+    transition: width 1s;  
+}
+
+#team .visible .progress50:before{
+    width: 50%;
+    transition-delay: 1.6s;
+}
+
+#team .visible .progress70:before{
+    width: 70%;
+    transition-delay: 1s;
+}
+
+#team .visible .progress90:before{
+    width: 90%;
+    transition-delay: 1.4s;
+}
+
+#team .visible .progress100:before{
+    width: 100%;
+    transition-delay: 1.2s;
+}
+
+/*FIN SECTION EQUIPO*/
+
+
+/*SECTION VIDEO*/
+
+#video{
+    text-align: center;
+    color: #fff;
+}
+
+/*FIN SECTION VIDEO*/
+
+
 
 
 /*CORRECION MENU RESPONSIVE */

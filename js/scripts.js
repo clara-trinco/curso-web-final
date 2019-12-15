@@ -7,12 +7,21 @@ $(window).on("scroll", () => {
     $("#logo").css("transform",`rotate(${giraRuedita})`);
 
     //APARICION DE IMAGENES
-    const altura = $(".reveal").offset().top;//offset me da las coordenadas de donde esta y agregando el top solo me devuelve donde empieza
-    const diferencia = window.innerHeight * 0.5;
-    console.log(diferencia);
-    if(scrollRealizado >= altura - diferencia ){
-        $(".reveal").addClass("visible");
-    }
+    // const altura = $(".reveal").offset().top;//offset me da las coordenadas de donde esta y agregando el top solo me devuelve donde empieza
+    // const diferencia = window.innerHeight * 0.5;
+    // console.log(diferencia);
+    // if(scrollRealizado >= altura - diferencia ){
+    //     $(".reveal").addClass("visible");
+    // }
+
+    $(".reveal").each(function(){
+        const altura = $(this).offset().top;
+        const margen = window.innerHeight * 0.7;
+        if(scrollRealizado >= altura - margen ){
+            $(this).addClass("visible");
+        }
+    });
+
 });
 
 //Trazado de SVG
@@ -83,7 +92,7 @@ $("#stopVid").on("click",() => {
 })
 
 //SMOOTH SCROLL MENU NAVEGACION
-$(".nav-link").on("click" , function(){
+$(".nav-link, .button-link").on("click" , function(){
     const destino =$(this).attr("href");
     $("html").animate(
         {scrollTop: $(destino).offset().top},
