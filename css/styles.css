@@ -415,8 +415,139 @@ header{
 } 
 /*FIN SPINNER*/
 
+/* SECCIÓN PROYECTOS */
+#proyectos{
+    text-align: center;
+    background-image: url(../img/backgrounds/looping-blanco.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: right;
+    background-position-y: bottom;
+}
+
+#proyectos i{
+    padding: 10px;
+    font-size: 32px;
+    color: #bd9f86;
+}
+
+#proyectos h2{
+    font-size: 1.2rem;
+    color: #999;
+}
+
+#proyectos p{
+    font-size: 0.9rem;
+    color: #999;
+}
+
+#proyectos a{
+    margin-top: 60px;
+}
+
+.divisor{
+    width: 50px;
+    height: 5px;
+    margin: 10% auto 0;
+    background-color: #d7d7d7;
+}
+
+.imagen-proyecto{
+    width: 100%;
+}
+
+#proyectos img.reveal{
+    opacity: 0;
+    transform: translateX(2000px);
+    transition-duration: 1s;
+}
+
+#proyectos img.reveal.visible{
+    opacity: 1;
+    transform: translateX(0px);
+}
+/* FIN SECCIÓN PROYECTOS */
+
+/* SECCIÓN TRABAJOS */
+#trabajos img{
+    width: 100%;
+    filter: grayscale(70%);
+    transition-duration: 0.5s;
+}
+#trabajos img:hover{
+    filter: grayscale(0%);
+}
+
+.no-padding{
+    padding-left: 0;
+    padding-right: 0;
+}
+/* FIN SECCIÓN TRABAJOS */
+
+/* FOOTER */
+footer{
+    color: #777;
+    font-size: 0.9rem;
+    background-image: url(../img/backgrounds/bg-atracciones.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: bottom;
+}
+
+footer .col-md-3{
+    padding-left: 30px;
+}
+
+footer h4{
+    margin-bottom: 40px;
+    font-size: 1rem;
+}
+
+footer ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer ul li{
+    margin-bottom: 10px;
+}
+
+.margins-around{
+    margin: 5px;
+}
+
+.centrado{
+    display: block;
+    text-align: center;
+}
+
+.hecho{
+    margin-top: 50px;
+}
+
+.tachado{
+    text-decoration: line-through;
+}
+
+.legal{
+    color: #333;
+}
+/* FIN FOOTER */
+
 
 /*CORRECION MENU RESPONSIVE */
+
+
+@media screen and (max-width: 399px){
+    h1{
+        letter-spacing: 20px;
+        font-size: 2rem;
+        letter-spacing: 20px;
+    }
+}
+
 @media screen and (max-width: 767px){
     .navbar-brand{
         align-self: start;
@@ -430,7 +561,17 @@ header{
         margin-top: 20px;
         padding-right:15px; 
     }
-};
+    
+    .hh2{
+        min-height: 80px !important;
+    }
+}
+
+
+
+
+
+
 
 /* FIN CORRECION MENU RESPONSIVE */
 
